@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build the Docker image
-        run: docker build -t yourdockerhubusername/your-image-name:latest .
+        run: docker build -t kannan1809/spring-git:latest .
 
       - name: Push the Docker image
-        run: docker push yourdockerhubusername/your-image-name:latest
+        run: docker push kannan1809/spring-git:latest
