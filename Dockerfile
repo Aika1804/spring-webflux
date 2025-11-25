@@ -1,6 +1,4 @@
 FROM openjdk:26-ea-slim
-COPY . /app
+COPY aishu-docker.jar /app/aishu-docker.jar
 WORKDIR /app
-COPY *.jar aishu-docker.jar
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "aishu-docker.jar"]
+CMD ["java", "-jar", "aishu-docker.jar"]

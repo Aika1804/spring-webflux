@@ -24,13 +24,10 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }} 
     
     - name: Build and push Docker image
-      uses: docker/build-push-action@v5
-      with:
-        context: .
-        push: true
-        tags: kannan1809/aishu-docker:latest
+      run: docker build -t kannan1809/aishu-docker:latest .
 
-    
+    - name: Push the image to hub
+      run: docker push kannan1809/aishu-docker:latest
    
 
 
